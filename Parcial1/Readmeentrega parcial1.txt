@@ -5,20 +5,25 @@
 1. User Registration:
    - Users should be able to register for an account by providing a valid email address and password.
    - Registration should include validation of email format and password strength.
+   - The system must provide clear and concise instructions during the registration process.
  
 2. User Login:
    - Registered users should be able to log in with their email and password.
-   
+   - User authentication should be securely handled, and passwords must be hashed and salted before storage.
+
  
 3. Forgot Password:
    - Users should have the option to reset their password if forgotten.
    - This process should involve sending a password reset link to the user's registered email.
+   - The password reset must be done through your validated email.
+
  
 4. Session Management:
    - User sessions should be managed securely, including session timeouts and the ability to log out.
  
 5. Authentication Using a Database:
    - User data, including credentials, should be stored securely in a database.
+   - Database access should be protected and follow best security practices.
   
  
 6. Authentication Using an API:
@@ -27,6 +32,7 @@
  
 7. Error Handling:
    - Proper error messages should be displayed to users for failed login attempts or other authentication-related errors.
+   - Log and handle errors gracefully to avoid exposing sensitive information.
    
  
  Non-Functional Requirements:
