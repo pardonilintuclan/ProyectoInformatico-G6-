@@ -1,3 +1,14 @@
+CREATE DATABASE parcial1;
+USE parcial1;
+CREATE TABLE `login` (
+  `name` VARCHAR(20) NOT NULL,
+  `password` VARCHAR(20) NULL,
+  PRIMARY KEY (`name`)); 
+
+INSERT INTO  login (name,password)
+VALUES ("rodolfo" , "1234pass");
+
+
 App Login Screen Requirements
  
  Functional Requirements:
