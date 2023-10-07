@@ -1,9 +1,9 @@
 <?php
-// Conexión a la base de datos
-$servername = "localhost"; // Cambia esto a la dirección de tu servidor MySQL
-$username = "root"; // Cambia esto al nombre de usuario de tu base de datos
-$password = " "; // Cambia esto a la contraseña de tu base de datos
-$database = "login.sql"; // Cambia esto al nombre de tu base de datos
+// Database connection
+$servername = "localhost"; // Change this to the address of your MySQL server
+$username = "root"; // Change this to your database username
+$password = " "; // Change this to your database password
+$database = "login.sql"; // Change this to the name of your database
 
 $conn = new mysqli($servername, $username, $password, $database);
 
@@ -11,17 +11,17 @@ if ($conn->connect_error) {
     die("Error de conexión a la base de datos: " . $conn->connect_error);
 }
 
-// Verificación de inicio de sesión
+// Login verification
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario = $_POST["usuario"];
     $contraseña = $_POST["contraseña"];
 
-    // Realiza la consulta para verificar las credenciales
+    // Make the query to verify the credentials
     $sql = "SELECT * FROM usuarios WHERE usuario = '$usuario' AND contraseña = '$contraseña'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        // Las credenciales son correctas, redirige al usuario a la página deseada
+        // The credentials are correct, redirect the user to the desired page
         header("Location: https://proyectoinformatico1.atlassian.net/jira/software/projects/G6/boards/7");
         exit();
     } else {
@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<!-- Tu código HTML continúa aquí -->
+<!-- HTML code continued here -->
 
 <html>
     <head>
