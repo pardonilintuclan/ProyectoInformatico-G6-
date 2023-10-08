@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Task Administrator</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Task Administrator</h1>
+        <div class="input-group mb-3">
+            <input type="text" id="task" class="form-control" placeholder="New Task">
+            <input type="text" id="asign" class="form-control" placeholder="Asigned to">
+            <input type="text" id="deadline" class="form-control" placeholder="Deadline">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button" onclick="addtask()">Add</button>
+                <button class="btn btn-danger" type="button" onclick="deletetask()">Delete</button>
+                <button class="btn btn-success" type="button" onclick="loadtask()">Refresh</button>
+            </div>
+        </div>
+        <ul id="listtasks" class="list-group">
+           
+        </ul>
+    </div>
+    <script src="addtask.js"></script>
+    <script src="deletetask.js"></script>
+    <script src="loadtask.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
