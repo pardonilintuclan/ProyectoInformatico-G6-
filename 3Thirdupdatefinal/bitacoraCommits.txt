@@ -1,0 +1,1 @@
+1. (Juan Forero) Commit definición inicial de ruta del proyecto: Se consiera AWS y Azure como cantidatos para ejecución del proyecto en la nube, dependiendo de las facilidades que otorguen los servicios.
